@@ -373,19 +373,18 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴩᴩᴏʀᴛ", callback_data="fallen_support"
+                            text="⚡𝐒υρρσя𝐓⚡", url=f"https://t.me/fun_here"
                         ),
                         InlineKeyboardButton(
-                            text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"
+                            text="🌹𝐇єʅ𝐏🌹", callback_data="help_back"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"
+                            text="✨𝐃єνєℓσρє𝐑✨", url=f"tg://user?id={OWNER_ID}"
                         ),
                         InlineKeyboardButton(
-                            text="sᴏᴜʀᴄᴇ",
-                            callback_data="source_",
+                            text="⭐𝐔ρ∂αтє𝐒⭐", url=f"https://t.me/about_skshivam"
                         ),
                     ],
                     [

@@ -72,42 +72,49 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*ʜᴇʏ* {}, 🥀
+*𝐇𝐄𝐘* {}, 🥀
 
-*๏ ᴛʜɪs ɪs* {} !
-➻ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
+*🍷𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨* {} 🍷
 
-──────────────────
-*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
+🌹𝐈 𝐀𝐦 𝐓𝐡𝐞 𝐌𝐨𝐬𝐭 𝐏𝐨𝐰𝐞𝐫𝐟𝐮𝐥 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐫𝐨𝐮𝐩 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭 𝐁𝐨𝐭 𝐖𝐢𝐭𝐡 𝐌𝐚𝐧𝐲 𝐅𝐚𝐧𝐭𝐚𝐬𝐭𝐢𝐜 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬..🌹
+─────────────────
+🥳𝐀𝐝𝐝 𝐌𝐞 𝐈𝐧 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩𝐬 𝐓𝐨 𝐌𝐚𝐧𝐚𝐠𝐞 𝐈𝐭 𝐕𝐞𝐫𝐲 𝐒𝐦𝐨𝐨𝐭𝐡𝐥𝐲 𝐚𝐧𝐝 𝐄𝐧𝐣𝐨𝐲 𝐀𝐥𝐥 𝐌𝐲 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬..🥳
+─────────────────
+💞𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐓𝐡𝐞 𝐇𝐞𝐥𝐩 𝐁𝐮𝐭𝐭𝐨𝐧 𝐓𝐨 𝐆𝐞𝐭 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐀𝐛𝐨𝐮𝐭 𝐀𝐥𝐥 𝐓𝐡𝐞 𝐌𝐨𝐝𝐮𝐥𝐞𝐬 𝐀𝐧𝐝 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬.. 💞
+─────────────────
+🌹 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐃 𝐁𝐘 ➪ [✯ 𝐒ᴘᴇᴄᴛʀ𝐄 ✯](https://t.me/about_spectre)💞
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ",
+            text="•🌷𝐀∂𝐃 𝐌𝐞 𝐓𝐨 𝐘συ𝐑 𝐆яσυ𝐏🌷•",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
+        InlineKeyboardButton(text="𝐇єℓ𝐏 ☆ 𝐂σммαи∂𝐒", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="❄ ᴀʙᴏᴜᴛ ❄", callback_data="fallen_"),
-        InlineKeyboardButton(text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="🌸𝐀вσυ𝐓🌸", callback_data="fallen_"),
+        InlineKeyboardButton(text="⚡𝐒υρρσя𝐓⚡", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-        InlineKeyboardButton(text="🥀 ᴅᴇᴠᴇʟᴏᴩᴇʀ 🥀", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="☁️ sᴏᴜʀᴄᴇ ☁️", callback_data="source_"),
+        InlineKeyboardButton(text="🌹𝐃єνєℓσρє𝐑🌹", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="🎧𝐌υѕι𝐂🎧", url=f"https://t.me/phantom_musicbot"),
     ],
 ]
 
 HELP_STRINGS = f"""
-*» {BOT_NAME} ᴇxᴄʟᴜsɪᴠᴇ ꜰᴇᴀᴛᴜʀᴇs*
+*✰ <u> 𝐖𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐇𝐄𝐋𝐏 𝐒𝐄𝐂𝐓𝐈𝐎𝐍 </u> ✰ 
 
-➲ /start : ꜱᴛᴀʀᴛꜱ ᴍᴇ | ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ʏᴏᴜ'ᴠᴇ ᴀʟʀᴇᴀᴅʏ ᴅᴏɴᴇ ɪᴛ.
-➲ /help  : ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ꜱᴇᴄᴛɪᴏɴ.
-  ‣ ɪɴ ᴘᴍ : ᴡɪʟʟ ꜱᴇɴᴅ ʏᴏᴜ ʜᴇʟᴘ ꜰᴏʀ ᴀʟʟ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇꜱ.
-  ‣ ɪɴ ɢʀᴏᴜᴘ : ᴡɪʟʟ ʀᴇᴅɪʀᴇᴄᴛ ʏᴏᴜ ᴛᴏ ᴘᴍ, ᴡɪᴛʜ ᴀʟʟ ᴛʜᴀᴛ ʜᴇʟᴘ ᴍᴏᴅᴜʟᴇꜱ."""
+✨ 𝐂ʟɪᴄᴋ 𝐎ɴ 𝐓ʜᴇ 𝐁ᴇʟᴏᴡ 𝐁ᴜᴛᴛᴏɴs 𝐅ᴏʀ 𝐌ᴏʀᴇ 𝐈ɴғᴏʀᴍᴀᴛɪᴏɴ ✨ ...
+
+🥀𝐈ғ 𝐘ᴏᴜ 𝐀ʀᴇ 𝐅ᴀᴄɪɴɢ » 𝐀ɴʏ 𝐏ʀᴏʙʟᴇᴍs ɪɴ 𝐂ᴏᴍᴍᴀɴᴅs 𝐓ʜᴇɴ ❥︎ 𝐘ᴏᴜ 𝐂ᴀɴ 𝐂ᴏɴᴛᴀᴄᴛ 𝐓ᴏ 𝐌ʏ [𝐎ᴡɴᴇʀ](https://t.me/itsz_shivam) ❥︎ 𝐎ʀ 𝐀sᴋ ɪɴ ❥︎ 𝐎ᴜʀ [𝐒ᴜᴘᴘᴏʀᴛ 𝐂ʜᴀᴛ](https://t.me/fun_here) 💞 ...
+
+☆ 𝐓ʏᴘᴇ /help 𝐅ᴏʀ 𝐆ᴇᴛᴛɪɴɢ 𝐂ᴏᴍᴍᴀɴᴅs 𝐒ᴇᴄᴛɪᴏɴ..😇
+
+🌷𝐀ʟʟ 𝐂ᴏᴍᴍᴀɴᴅs 𝐂ᴀɴ 𝐁ᴇ 𝐔sᴇᴅ 𝐖ɪᴛʜ ➪ / 🌷"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -183,7 +190,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="☜", callback_data="help_back")]]
                     ),
                 )
 
@@ -204,7 +211,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_sticker(
-                "CAACAgUAAxkBAAJYsmLWRvm70cE-mmxSNCovEf4v1ueJAAIcCAACbMK4VuL4EmZEkq8WKQQ"
+                "CAACAgQAAx0Cb8p2IgACM8tlDKevrMnTjx1EJWgTsMUWRMzIwQAC8xEAAjGRAVJKnNWa5ijzlh4E"
             )
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
@@ -215,7 +222,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             START_IMG,
-            caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
+            caption="𝐈 𝐀ᴍ 𝐀ʟɪᴠᴇ 𝐃ᴜᴅᴇ !!\n<b>𝐈 𝐃ɪᴅɴ'ᴛ 𝐒ʟᴇᴘᴛ 𝐒ɪɴᴄᴇ​:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -293,7 +300,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "» *ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ꜰᴏʀ* *{}* :\n".format(
+                "» *𝐀ναιʅαвʅ𝐄 𝐂σммαи∂𝐒 𝐅ᴏ𝐑* *{}* :\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -303,7 +310,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="☜", callback_data="help_back")]]
                 ),
             )
 
@@ -347,43 +354,41 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
     if query.data == "fallen_":
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
-            text=f"*ʜᴇʏ,*🥀\n  *ᴛʜɪs ɪs {BOT_NAME}*"
-            "\n*ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ ᴀɴᴅ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴄᴀᴍᴍᴇʀꜱ ᴀɴᴅ ꜱᴘᴀᴍᴍᴇʀꜱ.*"
-            "\n*ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ sǫʟᴀʟᴄʜᴇᴍʏ ᴀɴᴅ ᴍᴏɴɢᴏᴅʙ ᴀs ᴅᴀᴛᴀʙᴀsᴇ.*"
+            text=f"*𝐇𝐄𝐋𝐋𝐎,,*🌹\n\n  *𝐓ʜɪs 𝐈s {BOT_NAME}*"
+            "\n\n*𝐓ʜᴇ 𝐌ᴏsᴛ 𝐏ᴏᴡᴇʀꜰᴜʟ 𝐁ᴏᴛ 𝐅ᴏʀ 𝐌ᴀɴᴀɢɪɴɢ 𝐘ᴏᴜʀ 𝐆ʀᴏᴜᴘ𝐬.🥰*"
             "\n\n────────────────────"
-            f"\n*➻ ᴜᴩᴛɪᴍᴇ »* {uptime}"
-            f"\n*➻ ᴜsᴇʀs »* {sql.num_users()}"
-            f"\n*➻ ᴄʜᴀᴛs »* {sql.num_chats()}"
+            f"\n*➻ 𝐔𝙿𝚃𝙸𝙼𝙴 »* {uptime}"
+            f"\n*➻ 𝐔𝚂𝙴𝚁𝚂 »* {sql.num_users()}"
+            f"\n*➻ 𝐂𝙷𝙰𝚃𝚂 »* {sql.num_chats()}"
             "\n────────────────────"
-            "\n\n➲  ɪ ᴄᴀɴ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ."
-            "\n➲  ɪ ʜᴀᴠᴇ ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴛɪ-ꜰʟᴏᴏᴅ ꜱʏꜱᴛᴇᴍ."
-            "\n➲  ɪ ᴄᴀɴ ɢʀᴇᴇᴛ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴄᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇꜱ ᴀɴᴅ ᴇᴠᴇɴ ꜱᴇᴛ ᴀ ɢʀᴏᴜᴘ'ꜱ ʀᴜʟᴇꜱ."
-            "\n➲  ɪ ᴄᴀɴ ᴡᴀʀɴ ᴜꜱᴇʀꜱ ᴜɴᴛɪʟ ᴛʜᴇʏ ʀᴇᴀᴄʜ ᴍᴀx ᴡᴀʀɴꜱ, ᴡɪᴛʜ ᴇᴀᴄʜ ᴘʀᴇᴅᴇꜰɪɴᴇᴅ ᴀᴄᴛɪᴏɴꜱ ꜱᴜᴄʜ ᴀꜱ ʙᴀɴ, ᴍᴜᴛᴇ, ᴋɪᴄᴋ, ᴇᴛᴄ."
-            "\n➲  ɪ ʜᴀᴠᴇ ᴀ ɴᴏᴛᴇ ᴋᴇᴇᴘɪɴɢ ꜱʏꜱᴛᴇᴍ, ʙʟᴀᴄᴋʟɪꜱᴛꜱ, ᴀɴᴅ ᴇᴠᴇɴ ᴘʀᴇᴅᴇᴛᴇʀᴍɪɴᴇᴅ ʀᴇᴘʟɪᴇꜱ ᴏɴ ᴄᴇʀᴛᴀɪɴ ᴋᴇʏᴡᴏʀᴅꜱ."
-            f"\n\n➻ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʙᴀsɪᴄ ʜᴇʟᴩ ᴀɴᴅ ɪɴғᴏ ᴀʙᴏᴜᴛ {BOT_NAME}.",
+            "\n\n➪  𝐈 𝐂ᴀɴ 𝐑ᴇꜱᴛʀɪᴄᴛ 𝐔ꜱᴇʀꜱ..🤩"
+            "\n➪  𝐈 𝐇ᴀᴠᴇ 𝐀ɴ 𝐀ᴅᴠᴀɴᴄᴇᴅ 𝐀ɴᴛɪ~𝐅ʟᴏᴏᴅ 𝐒ʏꜱᴛᴇᴍ..🤩"
+            "\n➪  𝐈 𝐂ᴀɴ 𝐆ʀᴇᴇᴛ 𝐔ꜱᴇʀꜱ 𝐖ɪᴛʜ 𝐂ᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ 𝐖ᴇʟᴄᴏᴍᴇ 𝐌ᴇssᴀɢᴇs 𝐀ɴᴅ 𝐄ᴠᴇɴ 𝐒ᴇᴛ 𝐀 𝐆ʀᴏᴜᴘ'ꜱ 𝐑ᴜʟᴇꜱ..🤩"
+            "\n➪  𝐈 𝐂ᴀɴ 𝐖ᴀʀɴ, 𝐌ᴜᴛᴇ, 𝐁ᴀɴ 𝐀ɴᴅ 𝐊ɪᴄᴋ 𝐔ꜱᴇʀꜱ..🤩"
+            "\n➪  𝐈 𝐇ᴀᴠᴇ 𝐀 𝐍ᴏᴛᴇ 𝐊ᴇᴇᴘɪɴɢ 𝐒ʏꜱᴛᴇᴍ, 𝐁ʟᴀᴄᴋʟɪꜱᴛꜱ, 𝐀ɴᴅ 𝐅ɪʟᴛᴇʀs » 𝐖ᴏʀᴋs 𝐎ɴʟʏ 𝐈ɴ 𝐆ʀᴏᴜᴘs..🤩"
+            f"\n\n➼ 𝐂ʟɪᴄᴋ 𝐎ɴ 𝐓ʜᴇ 𝐁ᴜᴛᴛᴏɴs 𝐆ɪᴠᴇɴ 𝐁ᴇʟᴏᴡ 𝐅ᴏʀ 𝐆ᴇᴛᴛɪɴɢ 𝐁ᴀsɪᴄ 𝐇ᴇʟᴩ 𝐀ɴᴅ 𝐈ɴғᴏ...🌷",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴩᴩᴏʀᴛ", callback_data="fallen_support"
+                            text="⚡𝐒υρρσя𝐓⚡", url=f"https://t.me/fun_here"
                         ),
                         InlineKeyboardButton(
-                            text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"
+                            text="🌹𝐇єʅ𝐏🌹", callback_data="help_back"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"
+                            text="✨𝐃єνєℓσρє𝐑✨", url=f"tg://user?id={OWNER_ID}"
                         ),
                         InlineKeyboardButton(
-                            text="sᴏᴜʀᴄᴇ",
-                            callback_data="source_",
+                            text="⭐𝐔ρ∂αтє𝐒⭐", url=f"https://t.me/over_poweredd"
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="◁", callback_data="fallen_back"),
+                        InlineKeyboardButton(text="☜", callback_data="fallen_back"),
                     ],
                 ]
             ),
@@ -409,11 +414,11 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                         ),
                         InlineKeyboardButton(
                             text="ɢɪᴛʜᴜʙ",
-                            url="https://github.com/AnonymousX1025",
+                            url="https://github.com/itszshivam",
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="◁", callback_data="fallen_"),
+                        InlineKeyboardButton(text="☜", callback_data="fallen_"),
                     ],
                 ]
             ),
@@ -453,7 +458,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="source_back")]]
+                [[InlineKeyboardButton(text="☜", callback_data="source_back")]]
             ),
         )
     elif query.data == "source_back":
@@ -476,12 +481,12 @@ def get_help(update: Update, context: CallbackContext):
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
             update.effective_message.reply_text(
-                f"Contact me in PM to get help of {module.capitalize()}",
+                f"𝐂ᴏɴᴛᴀᴄᴛ 𝐌ᴇ 𝐈ɴ 𝐊ʜᴏᴘᴄʜᴀ(𝐏𝐌) 𝐅ᴏʀ 𝐓ʜɪs {module.capitalize()}",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="ʜᴇʟᴘ",
+                                text="𝐇ꫀʅ𝐏",
                                 url="https://t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -492,12 +497,12 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "» ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴩ.",
+            "✰ 𝐂ʜᴏᴏsᴇ 𝐀ɴ 𝐎ᴘᴛɪᴏɴ 𝐅ᴏʀ 𝐆ᴇᴛᴛɪɴɢ 𝐇ᴇʟᴘ.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ɪɴ ᴩʀɪᴠᴀᴛᴇ",
+                            text="𝐎ᴘᴇɴ 𝐈ɴ 𝐊ʜᴏᴘᴄʜᴀ(𝐏𝐌)",
                             url="https://t.me/{}?start=help".format(
                                 context.bot.username
                             ),
@@ -505,7 +510,7 @@ def get_help(update: Update, context: CallbackContext):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ʜᴇʀᴇ",
+                            text="𝐎ᴩᴇɴ 𝐇ᴇʀᴇ",
                             callback_data="help_back",
                         )
                     ],
@@ -517,7 +522,7 @@ def get_help(update: Update, context: CallbackContext):
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = (
-            "Here is the available help for the *{}* module:\n".format(
+            "𝐇ᴇʀᴇ 𝐈s 𝐓ʜᴇ 𝐀ᴠᴀɪʟᴀʙʟᴇ 𝐇ᴇʟᴘ 𝐅ᴏʀ 𝐓ʜᴇ *{}* module:\n".format(
                 HELPABLE[module].__mod_name__
             )
             + HELPABLE[module].__help__
@@ -526,7 +531,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="☜", callback_data="help_back")]]
             ),
         )
 
@@ -598,7 +603,7 @@ def settings_button(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="◁",
+                                text="☜",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
@@ -673,7 +678,7 @@ def get_settings(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="sᴇᴛᴛɪɴɢs",
+                                text="𝐒ᴇᴛᴛɪɴɢ𝐒",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -715,14 +720,14 @@ def main():
                 chat_id=f"@{SUPPORT_CHAT}",
                 photo=START_IMG,
                 caption=f"""
-ㅤ🥀 {BOT_NAME} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ...
+ㅤㅤ🌹 {BOT_NAME} 𝐈s 𝐀ʟɪᴠᴇ 𝐃ᴜᴅᴇ..☆
 
-┏•❅────✧❅✦❅✧────❅•┓
-ㅤ★ **ᴘʏᴛʜᴏɴ :** `{y()}`
-ㅤ★ **ʟɪʙʀᴀʀʏ :** `{telever}`
-ㅤ★ **ᴛᴇʟᴇᴛʜᴏɴ :** `{tlhver}`
-ㅤ★ **ᴩʏʀᴏɢʀᴀᴍ :** `{pyrover}`
-┗•❅────✧❅✦❅✧────❅•┛""",
+┏•☆────✧☆✦☆✧────☆•┓
+ㅤ★ 𝐏утнσ𝐍 ➪ {y()}
+ㅤ★ 𝐋ιвяαя𝐘 ➪ {telever}
+ㅤ★ 𝐓єℓєтнσ𝐍 ➪ {tlhver}
+ㅤ★ 𝐏уяσgяαм𝐌 ➪ {pyrover}
+┗•☆────✧☆✦☆✧────☆•┛""",
                 parse_mode=ParseMode.MARKDOWN,
             )
         except Unauthorized:

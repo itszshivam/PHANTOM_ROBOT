@@ -185,14 +185,14 @@ def promote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs ʙᴀʙʏ !")
+        message.reply_text("𝐘ᴏᴜ 𝐃ᴏɴ'ᴛ 𝐇ᴀᴠᴇ 𝐑ɪɢʜᴛs 𝐓ᴏ 𝐀ᴅᴅ 𝐍ᴇᴡ 𝐀ᴅᴍɪɴs 𝐃ᴜᴅᴇ!! 𝐏ʟᴇᴀsᴇ 𝐓ᴀᴋᴇ 𝐓ʜᴀᴛ 𝐑ɪɢʜᴛ 𝐅ɪʀsᴛ😐")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            "𝐈 𝐃ᴏɴ'ᴛ 𝐊ɴᴏᴡ 𝐖ʜᴏ's 𝐓ʜᴀᴛ 𝐔sᴇʀ, 𝐍ᴇᴠᴇʀ 𝐒ᴇᴇɴ 𝐇ɪᴍ 𝐀ɴʏᴡʜᴇʀᴇ!!🤐",
         )
         return
 
@@ -202,12 +202,12 @@ def promote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ("administrator", "creator"):
-        message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
+        message.reply_text("𝐇ᴇ/𝐒ʜᴇ 𝐈s 𝐀ʟʀᴇᴀᴅʏ 𝐀ɴ 𝐀ᴅᴍɪɴ 𝐃ᴜᴅᴇ!!😏")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "» ɪ ᴄᴀɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ᴍʏsᴇʟғ, ᴍʏ ᴏᴡɴᴇʀ ᴅɪᴅɴ'ᴛ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ᴅᴏ sᴏ."
+            "𝐈 𝐂ᴀɴ'ᴛ 𝐏ʀᴏᴍᴏᴛᴇ 𝐌ʏsᴇʟғ, 𝐈ᴛ 𝐈s 𝐈ᴍᴘᴏssɪʙʟᴇ 𝐃ᴜᴅᴇ.. 𝐏ʟᴇᴀsᴇ 𝐏ʀᴏᴍᴏᴛᴇ 𝐌ᴇ 𝐌ᴀɴᴜᴀʟʟʏ🙄"
         )
         return
 
@@ -228,24 +228,24 @@ def promote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("» ᴀs ɪ ᴄᴀɴ sᴇᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴩʀᴇsᴇɴᴛ ʜᴇʀᴇ.")
+            message.reply_text("𝐓ʜᴀᴛ 𝐔sᴇʀ 𝐈s 𝐍ᴏᴛ 𝐏ʀᴇsᴇɴᴛ 𝐇ᴇʀᴇ 𝐃ᴜᴅᴇ!! 𝐀ᴅᴅ 𝐇ɪᴍ/𝐇ᴇʀ 𝐅ɪʀsᴛ..😁")
         else:
             message.reply_text(
-                "» sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ ᴜsᴇʀ ʙᴇғᴏʀᴇ ᴍᴇ."
+                "𝐒ᴏᴍᴇᴛʜɪɴɢ 𝐖ᴇɴᴛ 𝐖ʀᴏɴɢ, 𝐌ᴀʏʙᴇ 𝐒ᴏᴍᴇᴏɴᴇ 𝐇ᴀᴠᴇ 𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐓ʜᴀᴛ 𝐔sᴇʀ 𝐁ᴇғᴏʀᴇ 𝐌ᴇ.🥲"
             )
         return
 
     bot.sendMessage(
         chat.id,
-        f"<b>» ᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ</b> {chat.title}\n\nᴩʀᴏᴍᴏᴛᴇᴅ : {mention_html(user_member.user.id, user_member.user.first_name)}\nᴩʀᴏᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}",
+        f"<b>𝐏ʀᴏᴍᴏᴛɪɴɢ 𝐀 𝐔sᴇʀ 𝐈ɴ</b> {chat.title}\n\n𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐔sᴇʀ ➪ {mention_html(user_member.user.id, user_member.user.first_name)}\n𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐁ʏ ➪ {mention_html(user.id, user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#ᴩʀᴏᴍᴏᴛᴇᴅ\n"
-        f"<b>ᴩʀᴏᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>ᴜsᴇʀ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+        f"#𝐏𝐑𝐎𝐌𝐎𝐓𝐄𝐃\n"
+        f"<b>𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐁ʏ ➪ </b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐔sᴇʀ ➪ </b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
 
     return log_message
@@ -270,14 +270,14 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs ʙᴀʙʏ !")
+        message.reply_text("𝐘ᴏᴜ 𝐃ᴏɴ'ᴛ 𝐇ᴀᴠᴇ 𝐑ɪɢʜᴛs 𝐓ᴏ 𝐀ᴅᴅ 𝐍ᴇᴡ 𝐀ᴅᴍɪɴs 𝐃ᴜᴅᴇ!! 𝐏ʟᴇᴀsᴇ 𝐓ᴀᴋᴇ 𝐓ʜᴀᴛ 𝐑ɪɢʜᴛ 𝐅ɪʀsᴛ😐")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            "𝐈 𝐃ᴏɴ'ᴛ 𝐊ɴᴏᴡ 𝐖ʜᴏ's 𝐓ʜᴀᴛ 𝐔sᴇʀ, 𝐍ᴇᴠᴇʀ 𝐒ᴇᴇɴ 𝐇ɪᴍ 𝐀ɴʏᴡʜᴇʀᴇ!!🤐",
         )
         return
 
@@ -287,12 +287,12 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ("administrator", "creator"):
-        message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
+        message.reply_text("𝐇ᴇ 𝐈s 𝐀ʟʀᴇᴀᴅʏ 𝐀ɴ 𝐀ᴅᴍɪɴ 𝐃ᴜᴅᴇ!!😏")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "» ɪ ᴄᴀɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ᴍʏsᴇʟғ, ᴍʏ ᴏᴡɴᴇʀ ᴅɪᴅɴ'ᴛ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ᴅᴏ sᴏ."
+            "𝐈 𝐂ᴀɴ'ᴛ 𝐏ʀᴏᴍᴏᴛᴇ 𝐌ʏsᴇʟғ, 𝐈ᴛ 𝐈s 𝐈ᴍᴘᴏssɪʙʟᴇ 𝐃ᴜᴅᴇ.. 𝐏ʟᴇᴀsᴇ 𝐏ʀᴏᴍᴏᴛᴇ 𝐌ᴇ 𝐌ᴀɴᴜᴀʟʟʏ🙄"
         )
         return
 
@@ -309,24 +309,24 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("» ᴀs ɪ ᴄᴀɴ sᴇᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴩʀᴇsᴇɴᴛ ʜᴇʀᴇ.")
+            message.reply_text("𝐓ʜᴀᴛ 𝐔sᴇʀ 𝐈s 𝐍ᴏᴛ 𝐏ʀᴇsᴇɴᴛ 𝐇ᴇʀᴇ 𝐃ᴜᴅᴇ!! 𝐀ᴅᴅ 𝐇ɪᴍ/𝐇ᴇʀ 𝐅ɪʀsᴛ..😁")
         else:
             message.reply_text(
-                "» sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ ᴜsᴇʀ ʙᴇғᴏʀᴇ ᴍᴇ."
+                "𝐒ᴏᴍᴇᴛʜɪɴɢ 𝐖ᴇɴᴛ 𝐖ʀᴏɴɢ, 𝐌ᴀʏʙᴇ 𝐒ᴏᴍᴇᴏɴᴇ 𝐇ᴀᴠᴇ 𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐓ʜᴀᴛ 𝐔sᴇʀ 𝐁ᴇғᴏʀᴇ 𝐌ᴇ.🥲"
             )
         return
 
     bot.sendMessage(
         chat.id,
-        f"<b>» ʟᴏᴡ ᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ </b>{chat.title}\n\n<b>ᴩʀᴏᴍᴏᴛᴇᴅ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}\nᴩʀᴏᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}",
+        f"<b>𝐋ᴏᴡ 𝐏ʀᴏᴍᴏᴛɪɴɢ 𝐀 𝐔sᴇʀ 𝐈ɴ </b>{chat.title}\n\n<b>𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐔sᴇʀ ➪ b> {mention_html(user_member.user.id, user_member.user.first_name)}\n𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐁ʏ ➪ {mention_html(user.id, user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#ʟᴏᴡᴩʀᴏᴍᴏᴛᴇᴅ\n"
-        f"<b>ᴩʀᴏᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>ᴜsᴇʀ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+        f"#𝐋𝐎𝐖⋆𝐏𝐑𝐎𝐌𝐎𝐓𝐄𝐃\n"
+        f"<b>𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐁ʏ ➪ </b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>𝐏ʀᴏᴍᴏᴛᴇᴅ ᴜsᴇʀ ➪ </b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
 
     return log_message
@@ -351,14 +351,14 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴀᴅᴍɪɴs ʙᴀʙʏ !")
+        message.reply_text("𝐘ᴏᴜ 𝐃ᴏɴ'ᴛ 𝐇ᴀᴠᴇ 𝐑ɪɢʜᴛs 𝐓ᴏ 𝐀ᴅᴅ 𝐍ᴇᴡ 𝐀ᴅᴍɪɴs 𝐃ᴜᴅᴇ!! 𝐏ʟᴇᴀsᴇ 𝐓ᴀᴋᴇ 𝐓ʜᴀᴛ 𝐑ɪɢʜᴛ 𝐅ɪʀsᴛ😐")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            "𝐈 𝐃ᴏɴ'ᴛ 𝐊ɴᴏᴡ 𝐖ʜᴏ's 𝐓ʜᴀᴛ 𝐔sᴇʀ, 𝐍ᴇᴠᴇʀ 𝐒ᴇᴇɴ 𝐇ɪᴍ 𝐀ɴʏᴡʜᴇʀᴇ!!🤐",
         )
         return
 
@@ -368,12 +368,12 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ("administrator", "creator"):
-        message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
+        message.reply_text("𝐇ᴇ/𝐒ʜᴇ 𝐈s 𝐀ʟʀᴇᴀᴅʏ 𝐀ɴ 𝐀ᴅᴍɪɴ 𝐃ᴜᴅᴇ!!😏")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "» ɪ ᴄᴀɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ᴍʏsᴇʟғ, ᴍʏ ᴏᴡɴᴇʀ ᴅɪᴅɴ'ᴛ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ᴅᴏ sᴏ."
+            "𝐈 𝐂ᴀɴ'ᴛ 𝐏ʀᴏᴍᴏᴛᴇ 𝐌ʏsᴇʟғ, 𝐈ᴛ 𝐈s 𝐈ᴍᴘᴏssɪʙʟᴇ 𝐃ᴜᴅᴇ.. 𝐏ʟᴇᴀsᴇ 𝐏ʀᴏᴍᴏᴛᴇ 𝐌ᴇ 𝐌ᴀɴᴜᴀʟʟʏ🙄"
         )
         return
 
@@ -396,24 +396,24 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("» ᴀs ɪ ᴄᴀɴ sᴇᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴩʀᴇsᴇɴᴛ ʜᴇʀᴇ.")
+            message.reply_text("𝐓ʜᴀᴛ 𝐔sᴇʀ 𝐈s 𝐍ᴏᴛ 𝐏ʀᴇsᴇɴᴛ 𝐇ᴇʀᴇ 𝐃ᴜᴅᴇ!! 𝐀ᴅᴅ 𝐇ɪᴍ/𝐇ᴇʀ 𝐅ɪʀsᴛ..😁")
         else:
             message.reply_text(
-                "» sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ ᴜsᴇʀ ʙᴇғᴏʀᴇ ᴍᴇ."
+                "𝐒ᴏᴍᴇᴛʜɪɴɢ 𝐖ᴇɴᴛ 𝐖ʀᴏɴɢ, 𝐌ᴀʏʙᴇ 𝐒ᴏᴍᴇᴏɴᴇ 𝐇ᴀᴠᴇ 𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐓ʜᴀᴛ 𝐔sᴇʀ 𝐁ᴇғᴏʀᴇ 𝐌ᴇ.🥲"
             )
         return
 
     bot.sendMessage(
         chat.id,
-        f"» ғᴜʟʟᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ <b>{chat.title}</b>\n\n<b>ᴜsᴇʀ : {mention_html(user_member.user.id, user_member.user.first_name)}</b>\n<b>ᴩʀᴏᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}</b>",
+        f"𝐅ᴜʟʟᴩʀᴏᴍᴏᴛɪɴɢ 𝐀 𝐔sᴇʀ 𝐈ɴ <b>{chat.title}</b>\n\n<b>𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐔sᴇʀ : {mention_html(user_member.user.id, user_member.user.first_name)}</b>\n<b>𝐏ʀᴏᴍᴏᴛᴇᴅ ʙʏ : {mention_html(user.id, user.first_name)}</b>",
         parse_mode=ParseMode.HTML,
     )
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#ғᴜʟʟᴩʀᴏᴍᴏᴛᴇᴅ\n"
-        f"<b>ᴩʀᴏᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>ᴜsᴇʀ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+        f"#𝐅𝐔𝐋𝐋-𝐏𝐑𝐎𝐌𝐎𝐓𝐄𝐃\n"
+        f"<b>𝐏ʀᴏᴍᴏᴛᴇᴅ ʙʏ ➪ </b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐔sᴇʀ ➪ </b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
 
     return log_message

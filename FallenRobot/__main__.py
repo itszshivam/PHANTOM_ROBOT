@@ -298,7 +298,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "☆⁠➜ *𝐀ναιʅαвʅ𝐄 𝐂σммαи∂𝐒 𝐅ᴏ𝐑* *{}* :\n".format(
+                "🌟 *𝐀ναιʅαвʅ𝐄 𝐂σммαи∂𝐒 𝐅ᴏ𝐑* *{}* :\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -495,7 +495,7 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "✰ 𝐂ʜᴏᴏsᴇ 𝐀ɴ 𝐎ᴘᴛɪᴏɴ 𝐅ᴏʀ 𝐆ᴇᴛᴛɪɴɢ 𝐇ᴇʟᴘ.",
+            "🌟 𝐂ʜᴏᴏsᴇ 𝐀ɴ 𝐎ᴘᴛɪᴏɴ 𝐅ᴏʀ 𝐆ᴇᴛᴛɪɴɢ 𝐇ᴇʟᴘ.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -520,7 +520,7 @@ def get_help(update: Update, context: CallbackContext):
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = (
-            "𝐇ᴇʀᴇ 𝐈s 𝐓ʜᴇ 𝐀ᴠᴀɪʟᴀʙʟᴇ 𝐇ᴇʟᴘ 𝐅ᴏʀ 𝐓ʜᴇ *{}* module:\n".format(
+            "🌟 𝐇ᴇʀᴇ 𝐈s 𝐓ʜᴇ 𝐀ᴠᴀɪʟᴀʙʟᴇ 𝐇ᴇʟᴘ 𝐅ᴏʀ 𝐓ʜᴇ *{}* module:\n".format(
                 HELPABLE[module].__mod_name__
             )
             + HELPABLE[module].__help__

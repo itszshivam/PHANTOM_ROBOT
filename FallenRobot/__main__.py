@@ -81,8 +81,6 @@ PM_START_TEXT = """
 🥳𝐀𝐝𝐝 𝐌𝐞 𝐈𝐧 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩𝐬 𝐓𝐨 𝐌𝐚𝐧𝐚𝐠𝐞 𝐈𝐭 𝐕𝐞𝐫𝐲 𝐒𝐦𝐨𝐨𝐭𝐡𝐥𝐲 𝐚𝐧𝐝 𝐄𝐧𝐣𝐨𝐲 𝐀𝐥𝐥 𝐌𝐲 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬..🥳
 ─────────────────
 💞𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐓𝐡𝐞 𝐇𝐞𝐥𝐩 𝐁𝐮𝐭𝐭𝐨𝐧 𝐓𝐨 𝐆𝐞𝐭 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐀𝐛𝐨𝐮𝐭 𝐀𝐥𝐥 𝐓𝐡𝐞 𝐌𝐨𝐝𝐮𝐥𝐞𝐬 𝐀𝐧𝐝 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬.. 💞
-─────────────────
-🌹 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐃 𝐁𝐘 ➪ [✯𝐒ᴘᴇᴄᴛʀ𝐄✯](https://t.me/about_spectre)💞
 """
 
 buttons = [
@@ -106,15 +104,15 @@ buttons = [
 ]
 
 HELP_STRINGS = f"""
-*☆☆ <u>𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐇𝐄𝐋𝐏 𝐒𝐄𝐂𝐓𝐈𝐎𝐍</u> ☆☆*
+*🌟 <u>𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐇𝐄𝐋𝐏 𝐒𝐄𝐂𝐓𝐈𝐎𝐍</u> *
 
 ✨ 𝐂ʟɪᴄᴋ 𝐎ɴ 𝐓ʜᴇ 𝐁ᴇʟᴏᴡ 𝐁ᴜᴛᴛᴏɴs 𝐅ᴏʀ 𝐌ᴏʀᴇ 𝐈ɴғᴏʀᴍᴀᴛɪᴏɴ ✨ ...
 
 🥀𝐈ғ 𝐘ᴏᴜ 𝐀ʀᴇ 𝐅ᴀᴄɪɴɢ » 𝐀ɴʏ 𝐏ʀᴏʙʟᴇᴍs ɪɴ 𝐂ᴏᴍᴍᴀɴᴅs 𝐓ʜᴇɴ ❥︎ 𝐘ᴏᴜ 𝐂ᴀɴ 𝐂ᴏɴᴛᴀᴄᴛ 𝐓ᴏ 𝐌ʏ [𝐎ᴡɴᴇʀ](https://t.me/itsz_shivam) ❥︎ 𝐎ʀ 𝐀sᴋ ɪɴ ❥︎ 𝐎ᴜʀ [𝐒ᴜᴘᴘᴏʀᴛ 𝐂ʜᴀᴛ](https://t.me/fun_here) 💞 ...
 
-☆ 𝐓ʏᴘᴇ /help 𝐅ᴏʀ 𝐆ᴇᴛᴛɪɴɢ 𝐂ᴏᴍᴍᴀɴᴅs 𝐒ᴇᴄᴛɪᴏɴ..😇
+➥ 𝐓ʏᴘᴇ /help 𝐅ᴏʀ 𝐆ᴇᴛᴛɪɴɢ 𝐂ᴏᴍᴍᴀɴᴅs 𝐒ᴇᴄᴛɪᴏɴ..😇
 
-🌷𝐀ʟʟ 𝐂ᴏᴍᴍᴀɴᴅs 𝐂ᴀɴ 𝐁ᴇ 𝐔sᴇᴅ 𝐖ɪᴛʜ ➪ / 🌷"""
+🌷𝐀ʟʟ 𝐂ᴏᴍᴍᴀɴᴅs 𝐂ᴀɴ 𝐁ᴇ 𝐔sᴇᴅ 𝐖ɪᴛʜ /🌷"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -190,7 +188,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="☜", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="⏎", callback_data="help_back")]]
                     ),
                 )
 
@@ -310,7 +308,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="☜", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="⏎", callback_data="help_back")]]
                 ),
             )
 
@@ -361,11 +359,11 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
             f"\n*➻ 𝐔𝚂𝙴𝚁𝚂 »* {sql.num_users()}"
             f"\n*➻ 𝐂𝙷𝙰𝚃𝚂 »* {sql.num_chats()}"
             "\n────────────────────"
-            "\n\n➪  𝐈 𝐂ᴀɴ 𝐑ᴇꜱᴛʀɪᴄᴛ 𝐔ꜱᴇʀꜱ..🤩"
-            "\n➪  𝐈 𝐇ᴀᴠᴇ 𝐀ɴ 𝐀ᴅᴠᴀɴᴄᴇᴅ 𝐀ɴᴛɪ~𝐅ʟᴏᴏᴅ 𝐒ʏꜱᴛᴇᴍ..🤩"
-            "\n➪  𝐈 𝐂ᴀɴ 𝐆ʀᴇᴇᴛ 𝐔ꜱᴇʀꜱ 𝐖ɪᴛʜ 𝐂ᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ 𝐖ᴇʟᴄᴏᴍᴇ 𝐌ᴇssᴀɢᴇs 𝐀ɴᴅ 𝐄ᴠᴇɴ 𝐒ᴇᴛ 𝐀 𝐆ʀᴏᴜᴘ'ꜱ 𝐑ᴜʟᴇꜱ..🤩"
-            "\n➪  𝐈 𝐂ᴀɴ 𝐖ᴀʀɴ, 𝐌ᴜᴛᴇ, 𝐁ᴀɴ 𝐀ɴᴅ 𝐊ɪᴄᴋ 𝐔ꜱᴇʀꜱ..🤩"
-            "\n➪  𝐈 𝐇ᴀᴠᴇ 𝐀 𝐍ᴏᴛᴇ 𝐊ᴇᴇᴘɪɴɢ 𝐒ʏꜱᴛᴇᴍ, 𝐁ʟᴀᴄᴋʟɪꜱᴛꜱ, 𝐀ɴᴅ 𝐅ɪʟᴛᴇʀs » 𝐖ᴏʀᴋs 𝐎ɴʟʏ 𝐈ɴ 𝐆ʀᴏᴜᴘs..🤩"
+            "\n\n➥  𝐈 𝐂ᴀɴ 𝐑ᴇꜱᴛʀɪᴄᴛ 𝐔ꜱᴇʀꜱ..🤩"
+            "\n➥  𝐈 𝐇ᴀᴠᴇ 𝐀ɴ 𝐀ᴅᴠᴀɴᴄᴇᴅ 𝐀ɴᴛɪ~𝐅ʟᴏᴏᴅ 𝐒ʏꜱᴛᴇᴍ..🤩"
+            "\n➥  𝐈 𝐂ᴀɴ 𝐆ʀᴇᴇᴛ 𝐔ꜱᴇʀꜱ 𝐖ɪᴛʜ 𝐂ᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ 𝐖ᴇʟᴄᴏᴍᴇ 𝐌ᴇssᴀɢᴇs 𝐀ɴᴅ 𝐄ᴠᴇɴ 𝐒ᴇᴛ 𝐀 𝐆ʀᴏᴜᴘ'ꜱ 𝐑ᴜʟᴇꜱ..🤩"
+            "\n➥  𝐈 𝐂ᴀɴ 𝐖ᴀʀɴ, 𝐌ᴜᴛᴇ, 𝐁ᴀɴ 𝐀ɴᴅ 𝐊ɪᴄᴋ 𝐔ꜱᴇʀꜱ..🤩"
+            "\n➥  𝐈 𝐇ᴀᴠᴇ 𝐀 𝐍ᴏᴛᴇ 𝐊ᴇᴇᴘɪɴɢ 𝐒ʏꜱᴛᴇᴍ, 𝐁ʟᴀᴄᴋʟɪꜱᴛꜱ, 𝐀ɴᴅ 𝐅ɪʟᴛᴇʀs » 𝐖ᴏʀᴋs 𝐎ɴʟʏ 𝐈ɴ 𝐆ʀᴏᴜᴘs..🤩"
             f"\n\n➼ 𝐂ʟɪᴄᴋ 𝐎ɴ 𝐓ʜᴇ 𝐁ᴜᴛᴛᴏɴs 𝐆ɪᴠᴇɴ 𝐁ᴇʟᴏᴡ 𝐅ᴏʀ 𝐆ᴇᴛᴛɪɴɢ 𝐁ᴀsɪᴄ 𝐇ᴇʟᴩ 𝐀ɴᴅ 𝐈ɴғᴏ...🌷",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -388,7 +386,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="☜", callback_data="fallen_back"),
+                        InlineKeyboardButton(text="⏎", callback_data="fallen_back"),
                     ],
                 ]
             ),
@@ -418,7 +416,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="☜", callback_data="fallen_"),
+                        InlineKeyboardButton(text="⏎", callback_data="fallen_"),
                     ],
                 ]
             ),
@@ -458,7 +456,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="☜", callback_data="source_back")]]
+                [[InlineKeyboardButton(text="⏎", callback_data="source_back")]]
             ),
         )
     elif query.data == "source_back":
@@ -531,7 +529,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="☜", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="⏎", callback_data="help_back")]]
             ),
         )
 
@@ -603,7 +601,7 @@ def settings_button(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="☜",
+                                text="⏎",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]

@@ -451,10 +451,12 @@ def demote(update: Update, context: CallbackContext) -> str:
         return
 
     if not user_member.status == "administrator":
-        message.reply_text("𝐓ʜᴀᴛ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ😆        return
+        message.reply_text("𝐓ʜᴀᴛ 𝐔sᴇʀ 𝐈sɴ'ᴛ 𝐀ɴ 𝐀ᴅᴍɪɴ 𝐇ᴇʀᴇ 𝐃ᴜᴅᴇ😆"
+        )
+        return
 
     if user_id == bot.id:
-        message.reply_text("» ɪ ᴄᴀɴ'ᴛ ᴅᴇᴍᴏᴛᴇ ᴍʏsᴇʟғ, ʙᴜᴛ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ɪ ᴄᴀɴ ʟᴇᴀᴠᴇ.")
+        message.reply_text("𝐈 𝐂ᴀɴ'ᴛ 𝐃ᴇᴍᴏᴛᴇ 𝐌ʏsᴇʟғ!! 𝐈 𝐀ᴍ 𝐍ᴏᴛ 𝐀ɴ 𝐈ᴅɪᴏᴛ 𝐋ɪᴋᴇ 𝐘ᴏᴜ😏")
         return
 
     try:
@@ -474,22 +476,21 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"» sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇᴍᴏᴛᴇᴅ ᴀ ᴀᴅᴍɪɴ ɪɴ <b>{chat.title}</b>\n\nᴅᴇᴍᴏᴛᴇᴅ : <b>{mention_html(user_member.user.id, user_member.user.first_name)}</b>\nᴅᴇᴍᴏᴛᴇʀ : {mention_html(user.id, user.first_name)}",
+            f"𝐒ᴜᴄᴄᴇssғᴜʟʟʏ 𝐃ᴇᴍᴏᴛᴇᴅ 𝐀ɴ 𝐀ᴅᴍɪɴ 𝐈ɴ <b>{chat.title}</b>\n\n𝐃ᴇᴍᴏᴛᴇᴅ 𝐔sᴇʀ ➪ <b>{mention_html(user_member.user.id, user_member.user.first_name)}</b>\n𝐃ᴇᴍᴏᴛᴇᴅ ʙʏ ➪ {mention_html(user.id, user.first_name)}",
             parse_mode=ParseMode.HTML,
         )
 
         log_message = (
             f"<b>{html.escape(chat.title)}:</b>\n"
-            f"#ᴅᴇᴍᴏᴛᴇᴅ\n"
-            f"<b>ᴅᴇᴍᴏᴛᴇʀ :</b> {mention_html(user.id, user.first_name)}\n"
-            f"<b>ᴅᴇᴍᴏᴛᴇᴅ :</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+            f"#𝐃𝐄𝐌𝐎𝐓𝐄𝐃\n"
+            f"<b>𝐃ᴇᴍᴏᴛᴇʀ 𝐁ʏ ➪ </b> {mention_html(user.id, user.first_name)}\n"
+            f"<b>𝐃ᴇᴍᴏᴛᴇᴅ 𝐔sᴇʀ ➪ </b> {mention_html(user_member.user.id, user_member.user.first_name)}"
         )
 
         return log_message
     except BadRequest:
         message.reply_text(
-            "» ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴇᴍᴏᴛᴇ ᴍᴀʏʙᴇ ɪ'ᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ᴏʀ ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴇʟsᴇ ᴩʀᴏᴍᴏᴛᴇᴅ ᴛʜᴀᴛ"
-            " ᴜsᴇʀ !",
+            "𝐅ᴀɪʟᴇᴅ 𝐓ᴏ 𝐃ᴇᴍᴏᴛᴇ 𝐌ᴀʏʙᴇ 𝐈'ᴍ 𝐍ᴏᴛ 𝐀ɴ 𝐀ᴅᴍɪɴ 𝐎ʀ 𝐒ᴏᴍᴇᴏɴᴇ 𝐄ʟsᴇ 𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐓ʜᴀᴛ 𝐔sᴇʀ!!🙂",
         )
         return
 
@@ -501,7 +502,7 @@ def refresh_admin(update, _):
     except KeyError:
         pass
 
-    update.effective_message.reply_text("» sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇғʀᴇsʜᴇᴅ ᴀᴅᴍɪɴ ᴄᴀᴄʜᴇ !")
+    update.effective_message.reply_text("✦𝐒ᴜᴄᴄᴇssғᴜʟʟʏ 𝐑ᴇғʀᴇsʜᴇᴅ 𝐀ᴅᴍɪɴ 𝐂ᴀᴄʜᴇ!!😇")
 
 
 @connection_status

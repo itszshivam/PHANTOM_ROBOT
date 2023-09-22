@@ -287,7 +287,7 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ("administrator", "creator"):
-        message.reply_text("𝐇ᴇ 𝐈s 𝐀ʟʀᴇᴀᴅʏ 𝐀ɴ 𝐀ᴅᴍɪɴ 𝐃ᴜᴅᴇ!!😏")
+        message.reply_text("𝐇ᴇ/𝐒ʜᴇ 𝐈s 𝐀ʟʀᴇᴀᴅʏ 𝐀ɴ 𝐀ᴅᴍɪɴ 𝐃ᴜᴅᴇ!!😏")
         return
 
     if user_id == bot.id:
@@ -405,13 +405,13 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"𝐅ᴜʟʟᴩʀᴏᴍᴏᴛɪɴɢ 𝐀 𝐔sᴇʀ 𝐈ɴ <b>{chat.title}</b>\n\n<b>𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐔sᴇʀ : {mention_html(user_member.user.id, user_member.user.first_name)}</b>\n<b>𝐏ʀᴏᴍᴏᴛᴇᴅ ʙʏ : {mention_html(user.id, user.first_name)}</b>",
+        f"𝐅ᴜʟʟᴩʀᴏᴍᴏᴛɪɴɢ 𝐀 𝐔sᴇʀ 𝐈ɴ <b>{chat.title}</b>\n\n<b>𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐔sᴇʀ ➪ {mention_html(user_member.user.id, user_member.user.first_name)}</b>\n<b>𝐏ʀᴏᴍᴏᴛᴇᴅ ʙʏ ➪ {mention_html(user.id, user.first_name)}</b>",
         parse_mode=ParseMode.HTML,
     )
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#𝐅𝐔𝐋𝐋-𝐏𝐑𝐎𝐌𝐎𝐓𝐄𝐃\n"
+        f"#𝐅𝐔𝐋𝐋⋆𝐏𝐑𝐎𝐌𝐎𝐓𝐄𝐃\n"
         f"<b>𝐏ʀᴏᴍᴏᴛᴇᴅ ʙʏ ➪ </b> {mention_html(user.id, user.first_name)}\n"
         f"<b>𝐏ʀᴏᴍᴏᴛᴇᴅ 𝐔sᴇʀ ➪ </b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
@@ -435,7 +435,7 @@ def demote(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "» ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ's ᴛʜᴀᴛ ᴜsᴇʀ, ɴᴇᴠᴇʀ sᴇᴇɴ ʜɪᴍ ɪɴ ᴀɴʏ ᴏғ ᴛʜᴇ ᴄʜᴀᴛs ᴡʜᴇʀᴇ ɪ ᴀᴍ ᴩʀᴇsᴇɴᴛ !",
+            "𝐈 𝐃ᴏɴ'ᴛ 𝐊ɴᴏᴡ 𝐖ʜᴏ's 𝐓ʜᴀᴛ 𝐔sᴇʀ, 𝐍ᴇᴠᴇʀ 𝐒ᴇᴇɴ 𝐇ɪᴍ 𝐀ɴʏᴡʜᴇʀᴇ!!🤐",
         )
         return
 
@@ -446,13 +446,12 @@ def demote(update: Update, context: CallbackContext) -> str:
 
     if user_member.status == "creator":
         message.reply_text(
-            "» ᴛʜᴀᴛ ᴜsᴇʀ ɪs ᴏᴡɴᴇʀ ᴏғ ᴛʜᴇ ᴄʜᴀᴛ ᴀɴᴅ ɪ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴛᴏ ᴩᴜᴛ ᴍʏsᴇʟғ ɪɴ ᴅᴀɴɢᴇʀ."
+            "𝐓ʜᴀᴛ 𝐔sᴇʀ 𝐈s 𝐎ᴡɴᴇʀ 𝐎ғ 𝐓ʜɪs 𝐂ʜᴀᴛ!!😎"
         )
         return
 
     if not user_member.status == "administrator":
-        message.reply_text("» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ᴛʜᴀᴛ ᴜsᴇʀ ɪs ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ !")
-        return
+        message.reply_text("𝐓ʜᴀᴛ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ😆        return
 
     if user_id == bot.id:
         message.reply_text("» ɪ ᴄᴀɴ'ᴛ ᴅᴇᴍᴏᴛᴇ ᴍʏsᴇʟғ, ʙᴜᴛ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ɪ ᴄᴀɴ ʟᴇᴀᴠᴇ.")

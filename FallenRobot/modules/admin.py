@@ -53,7 +53,7 @@ def set_sticker(update: Update, context: CallbackContext):
                 )
             msg.reply_text(f"ᴇʀʀᴏʀ ! {excp.message}.")
     else:
-        msg.reply_text("» ʀᴇᴩʟʏ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀ ᴛᴏ sᴇᴛ ɪᴛ ᴀs ɢʀᴏᴜᴩ sᴛɪᴄᴋᴇʀ ᴩᴀᴄᴋ !")
+        msg.reply_text("𝐑ᴇᴩʟʏ 𝐓ᴏ ᴀ 𝐒ᴛɪᴄᴋᴇʀ 𝐓ᴏ 𝐒ᴇᴛ 𝐈ᴛ 𝐀s 𝐆ʀᴏᴜᴩ 𝐒ᴛɪᴄᴋᴇʀ 𝐏ᴀᴄᴋ! 😛")
 
 
 @bot_admin
@@ -64,7 +64,7 @@ def setchatpic(update: Update, context: CallbackContext):
     user = update.effective_user
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        msg.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴄʜᴀɴɢᴇ ɢʀᴏᴜᴩ ɪɴғᴏ ʙᴀʙʏ !")
+        msg.reply_text("𝐘ᴏᴜ 𝐃ᴏɴ'ᴛ 𝐇ᴀᴠᴇ 𝐏ᴇʀᴍɪssɪᴏɴs 𝐓ᴏ 𝐂ʜᴀɴɢᴇ 𝐆ʀᴏᴜᴩ 𝐈ɴғᴏ!! 𝐒ᴛᴀʏ 𝐈ɴ 𝐘ᴏᴜʀ 𝐋ɪᴍɪᴛs 𝐃ᴜᴅᴇ😒😏")
         return
 
     if msg.reply_to_message:
@@ -73,23 +73,23 @@ def setchatpic(update: Update, context: CallbackContext):
         elif msg.reply_to_message.document:
             pic_id = msg.reply_to_message.document.file_id
         else:
-            msg.reply_text("» ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ sᴇᴛ ᴩʜᴏᴛᴏs ᴀs ɢʀᴏᴜᴩ ᴩғᴩ !")
+            msg.reply_text("𝐘ᴏᴜ 𝐂ᴀɴ 𝐎ɴʟʏ 𝐒ᴇᴛ 𝐏ʜᴏᴛᴏs 𝐀s 𝐆ʀᴏᴜᴩ 𝐏𝐅𝐏!! 𝐋ᴏ𝐋😆")
             return
-        dlmsg = msg.reply_text("» ᴄʜᴀɴɢɪɴɢ ɢʀᴏᴜᴩ's ᴩʀᴏғɪʟᴇ ᴩɪᴄ...")
+        dlmsg = msg.reply_text("𝐂ʜᴀɴɢɪɴɢ 𝐆ʀᴏᴜᴩ's 𝐏ʀᴏғɪʟᴇ 𝐏ɪᴄ... 𝐖ᴀɪᴛᴛ!!😁")
         tpic = context.bot.get_file(pic_id)
         tpic.download("gpic.png")
         try:
             with open("gpic.png", "rb") as chatp:
                 context.bot.set_chat_photo(int(chat.id), photo=chatp)
-                msg.reply_text("» sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴛ ɢʀᴏᴜᴩ ᴩʀᴏғɪʟᴇ ᴩɪᴄ !")
+                msg.reply_text("𝐒ᴜᴄᴄᴇssғᴜʟʟʏ 𝐒ᴇᴛ 𝐆ʀᴏᴜᴩ 𝐏ʀᴏғɪʟᴇ 𝐏ɪᴄ!! 𝐍ᴏᴡ 𝐈ᴛ 𝐖ɪʟʟ 𝐋ᴏᴏᴋ 𝐁ᴇᴛᴛᴇʀ😄")
         except BadRequest as excp:
-            msg.reply_text(f"ᴇʀʀᴏʀ ! {excp.message}")
+            msg.reply_text(f"𝐄ʀʀᴏʀ!! ❌ {excp.message}")
         finally:
             dlmsg.delete()
             if os.path.isfile("gpic.png"):
                 os.remove("gpic.png")
     else:
-        msg.reply_text("» ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴩʜᴏᴛᴏ ᴏʀ ғɪʟᴇ ᴛᴏ sᴇᴛ ɪᴛ ᴀs ɢʀᴏᴜᴩ ᴩʀᴏғɪʟᴇ ᴩɪᴄ !")
+        msg.reply_text("𝐑ᴇᴩʟʏ 𝐓ᴏ ᴀ 𝐏ʜᴏᴛᴏ 𝐎ʀ 𝐅ɪʟᴇ 𝐓ᴏ 𝐒ᴇᴛ 𝐈ᴛ 𝐀s 𝐆ʀᴏᴜᴩ 𝐏ʀᴏғɪʟᴇ 𝐏ɪᴄ!!📷")
 
 
 @bot_admin
@@ -100,13 +100,13 @@ def rmchatpic(update: Update, context: CallbackContext):
     user = update.effective_user
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        msg.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴄʜᴀɴɢᴇ ɢʀᴏᴜᴩ ɪɴғᴏ ʙᴀʙʏ !")
+        msg.reply_text("𝐘ᴏᴜ 𝐃ᴏɴ'ᴛ 𝐇ᴀᴠᴇ 𝐏ᴇʀᴍɪssɪᴏɴs 𝐓ᴏ 𝐂ʜᴀɴɢᴇ 𝐆ʀᴏᴜᴩ 𝐈ɴғᴏ!! 𝐒ᴛᴀʏ 𝐈ɴ 𝐘ᴏᴜʀ 𝐋ɪᴍɪᴛs 𝐃ᴜᴅᴇ😒😏")
         return
     try:
         context.bot.delete_chat_photo(int(chat.id))
-        msg.reply_text("» sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ɢʀᴏᴜᴩ's ᴅᴇғᴀᴜʟᴛ ᴩʀᴏғɪʟᴇ ᴩɪᴄ !")
+        msg.reply_text("𝐒ᴜᴄᴄᴇssғᴜʟʟʏ 𝐃ᴇʟᴇᴛᴇᴅ 𝐆ʀᴏᴜᴩ's 𝐃ᴇғᴀᴜʟᴛ 𝐏ʀᴏғɪʟᴇ 𝐏ɪᴄ ! 🙂")
     except BadRequest as excp:
-        msg.reply_text(f"ᴇʀʀᴏʀ ! {excp.message}.")
+        msg.reply_text(f"𝐄ʀʀᴏʀ!!✖️ {excp.message}.")
         return
 
 
@@ -119,21 +119,21 @@ def set_desc(update: Update, context: CallbackContext):
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
         return msg.reply_text(
-            "» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴄʜᴀɴɢᴇ ɢʀᴏᴜᴩ ɪɴғᴏ ʙᴀʙʏ !"
+            "𝐘ᴏᴜ 𝐃ᴏɴ'ᴛ 𝐇ᴀᴠᴇ 𝐏ᴇʀᴍɪssɪᴏɴs 𝐓ᴏ 𝐂ʜᴀɴɢᴇ 𝐆ʀᴏᴜᴩ 𝐈ɴғᴏ!! 𝐒ᴛᴀʏ 𝐈ɴ 𝐘ᴏᴜʀ 𝐋ɪᴍɪᴛs 𝐃ᴜᴅᴇ😒😏"
         )
 
     tesc = msg.text.split(None, 1)
     if len(tesc) >= 2:
         desc = tesc[1]
     else:
-        return msg.reply_text("» ᴡᴛғ, ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ sᴇᴛ ᴀɴ ᴇᴍᴩᴛʏ ᴅᴇsᴄʀɪᴩᴛɪᴏɴ !")
+        return msg.reply_text("𝐖𝐓𝐅, 𝐘ᴏᴜ 𝐖ᴀɴᴛ 𝐓ᴏ 𝐒ᴇᴛ 𝐀ɴ 𝐄ᴍᴩᴛʏ 𝐃ᴇsᴄʀɪᴩᴛɪᴏɴ!! 🤣")
     try:
         if len(desc) > 255:
             return msg.reply_text(
-                "» ᴅᴇsᴄʀɪᴩᴛɪᴏɴ ᴍᴜsᴛ ʙᴇ ʟᴇss ᴛʜᴀɴ 255 ᴡᴏʀᴅs ᴏʀ ᴄʜᴀʀᴀᴄᴛᴇʀs !"
+                "𝐃ᴇsᴄʀɪᴩᴛɪᴏɴ 𝐌ᴜsᴛ 𝐁ᴇ 𝐋ᴇss 𝐓ʜᴀɴ 255 𝐂ʜᴀʀᴀᴄᴛᴇʀs!! 𝐒ʜᴏʀᴛ 𝐈ᴛ🥲"
             )
         context.bot.set_chat_description(chat.id, desc)
-        msg.reply_text(f"» sᴜᴄᴄᴇssғᴜʟʟʏ ᴜᴩᴅᴀᴛᴇᴅ ᴄʜᴀᴛ ᴅᴇsᴄʀɪᴩᴛɪᴏɴ ɪɴ {chat.title}!")
+        msg.reply_text(f"𝐒ᴜᴄᴄᴇssғᴜʟʟʏ 𝐔ᴩᴅᴀᴛᴇᴅ 𝐂ʜᴀᴛ 𝐃ᴇsᴄʀɪᴩᴛɪᴏɴ 𝐈ɴ {chat.title}!! 𝐍ᴏᴡ 𝐄ɴᴊᴏʏ🤗")
     except BadRequest as excp:
         msg.reply_text(f"ᴇʀʀᴏʀ ! {excp.message}.")
 
@@ -147,22 +147,22 @@ def setchat_title(update: Update, context: CallbackContext):
     args = context.args
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        msg.reply_text("» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴄʜᴀɴɢᴇ ɢʀᴏᴜᴩ ɪɴғᴏ ʙᴀʙʏ !")
+        msg.reply_text("𝐘ᴏᴜ 𝐃ᴏɴ'ᴛ 𝐇ᴀᴠᴇ 𝐏ᴇʀᴍɪssɪᴏɴs 𝐓ᴏ 𝐂ʜᴀɴɢᴇ 𝐆ʀᴏᴜᴩ 𝐈ɴғᴏ!! 𝐒ᴛᴀʏ 𝐈ɴ 𝐘ᴏᴜʀ 𝐋ɪᴍɪᴛs 𝐃ᴜᴅᴇ😒😏")
         return
 
     title = " ".join(args)
     if not title:
-        msg.reply_text("» ᴇɴᴛᴇʀ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ sᴇᴛ ɪᴛ ᴀs ɴᴇᴡ ᴄʜᴀᴛ ᴛɪᴛʟᴇ !")
+        msg.reply_text("𝐄ɴᴛᴇʀ 𝐒ᴏᴍᴇ 𝐓ᴇxᴛ 𝐓ᴏ 𝐒ᴇᴛ 𝐈ᴛ 𝐀s 𝐍ᴇᴡ 𝐂ʜᴀᴛ 𝐓ɪᴛʟᴇ!! 😃")
         return
 
     try:
         context.bot.set_chat_title(int(chat.id), str(title))
         msg.reply_text(
-            f"» sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴛ <b>{title}</b> ᴀs ɴᴇᴡ ᴄʜᴀᴛ ᴛɪᴛʟᴇ !",
+            f"𝐒ᴜᴄᴄᴇssғᴜʟʟʏ 𝐒ᴇᴛ <b>{title}</b> 𝐀s 𝐍ᴇᴡ 𝐂ʜᴀᴛ 𝐓ɪᴛʟᴇ!! 𝐍ᴏᴡ 𝐄ɴᴊᴏʏ🤗",
             parse_mode=ParseMode.HTML,
         )
     except BadRequest as excp:
-        msg.reply_text(f"ᴇʀʀᴏʀ ! {excp.message}.")
+        msg.reply_text(f"𝐄ʀʀᴏʀ!!✖️ {excp.message}.")
         return
 
 

@@ -40,7 +40,7 @@ def import_data(update, context):
         chat_name = dispatcher.bot.getChat(conn).title
     else:
         if update.effective_message.chat.type == "private":
-            update.effective_message.reply_text("This is a group only command!")
+            update.effective_message.reply_text("𝐓ʜɪs 𝐈s 𝐀 𝐆ʀᴏᴜᴘ 𝐎ɴʟʏ 𝐂ᴏᴍᴍᴀɴᴅ!!😊")
             return ""
 
         chat = update.effective_chat
@@ -365,7 +365,7 @@ def get_chat(chat_id, chat_data):
         return {"status": False, "value": False}
 
 
-__mod_name__ = "Bᴀᴄᴋᴜᴘ"
+__mod_name__ = "𝐁α¢кυρ"
 
 __help__ = """
 *Only for group owner:*

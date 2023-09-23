@@ -135,7 +135,7 @@ def set_desc(update: Update, context: CallbackContext):
         context.bot.set_chat_description(chat.id, desc)
         msg.reply_text(f"𝐒ᴜᴄᴄᴇssғᴜʟʟʏ 𝐔ᴩᴅᴀᴛᴇᴅ 𝐂ʜᴀᴛ 𝐃ᴇsᴄʀɪᴩᴛɪᴏɴ 𝐈ɴ {chat.title}!! 𝐍ᴏᴡ 𝐄ɴᴊᴏʏ🤗")
     except BadRequest as excp:
-        msg.reply_text(f"ᴇʀʀᴏʀ ! {excp.message}.")
+        msg.reply_text(f"𝐄ʀʀᴏʀ!!✖️ {excp.message}.")
 
 
 @bot_admin
@@ -883,27 +883,27 @@ def adminlist(update, context):
 
 
 __help__ = """
-*User Commands*:
-» /admins*:* list of admins in the chat
-» /pinned*:* to get the current pinned message.
+*⁠☞ 𝐔sᴇʀ 𝐂ᴏᴍᴍᴀɴᴅs*:
+⤖ /admins*➪* ᴛᴏ ɢᴇᴛ ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀᴅᴍɪɴs ɪɴ ᴛʜᴀᴛ ᴄʜᴀᴛ..
+⤖ /pinned*➪* ᴛᴏ ɢᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇs..
 
-*The Following Commands are Admins only:* 
-» /pin*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
-» /unpin*:* unpins the currently pinned message
-» /invitelink*:* gets invitelink
-» /promote*:* promotes the user replied to
-» /lowpromote*:* promotes the user replied to with half rights
-» /fullpromote*:* promotes the user replied to with full rights
-» /demote*:* demotes the user replied to
-» /title <title here>*:* sets a custom title for an admin that the bot promoted
-» /admincache*:* force refresh the admins list
-» /del*:* deletes the message you replied to
-» /purge*:* deletes all messages between this and the replied to message.
-» /purge <integer X>*:* deletes the replied message, and X messages following it if replied to a message.
-» /setgtitle <text>*:* set group title
-» /setgpic*:* reply to an image to set as group photo
-» /setdesc*:* Set group description
-» /setsticker*:* Set group sticker
+*⁠☞ 𝐀ᴅᴍɪɴ 𝐂ᴏᴍᴍᴀɴᴅs:* 
+⤖ /pin*➪* ᴘɪɴs ᴛʜᴇ ᴍᴇssᴀɢᴇ.. ᴀᴅᴅ -loud ᴛᴏ ɴᴏᴛɪғɪᴇs ᴛʜᴇ ᴜsᴇʀs..
+⤖ /unpin*➪* ᴜɴᴘɪɴs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛʟʏ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ..
+⤖ /invitelink*➪* ɢᴇᴛs ɪɴᴠɪᴛᴇʟɪɴᴋ ᴏғ ᴛʜᴀᴛ ᴄʜᴀᴛ..
+⤖ /promote*➪* ᴘʀᴏᴍᴏᴛᴇs ᴛʜᴇ ᴜsᴇʀ..
+⤖ /lowpromote*➪* ᴘʀᴏᴍᴏᴛᴇs ᴛʜᴇ ᴜsᴇʀs ᴡɪᴛʜ ʜᴀʟғ ʀɪɢʜᴛs..
+⤖ /fullpromote*➪* ᴘʀᴏᴍᴏᴛᴇs ᴛʜᴇ ᴜsᴇʀs ᴡɪᴛʜ ғᴜʟʟ ʀɪɢʜᴛs...
+⤖ /demote*➪* ᴅᴇᴍᴏᴛᴇs ᴛʜᴇ ᴜsᴇʀ..
+⤖ /title <title here>*➪* sᴇᴛs ᴛʜᴇ ᴄᴜsᴛᴏᴍ ᴛɪᴛʟᴇ ғᴏʀ ᴛʜᴀᴛ ᴀᴅᴍɪɴ..
+⤖ /admincache*➪* ʀᴇғʀᴇsʜ ᴛʜᴇ ᴀᴅᴍɪɴs ʟɪsᴛ
+⤖ /del *➪* ᴅᴇʟᴇᴛᴇs ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ..
+⤖ /purge*➪* ᴅᴇʟᴇᴛᴇs ᴀʟʟ ᴛʜᴇ ᴍᴇssᴀɢᴇs ғʀᴏᴍ ʀᴇᴘʟɪᴇᴅ ᴛᴏ..
+⤖ /purge <amount X>*➪* ᴅᴇʟᴇᴛᴇs ᴛʜᴇ ᴍᴇssᴀɢᴇs ᴡɪᴛʜ ʟɪᴍɪᴛᴇᴅ ᴄᴏᴜɴᴛ..
+⤖ /setgtitle <text>*➪* sᴇᴛs ɢʀᴏᴜᴘ ᴛɪᴛʟᴇs..
+⤖ /setgpic*➪* ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ɪᴍᴀɢᴇ ᴛᴏ sᴇᴛ ᴛʜᴇ ɢʀᴏᴜᴘ ᴘɪᴄ..
+⤖ /setdesc*➪* sᴇᴛ ɢʀᴏᴜᴘ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ..
+⤖ /setsticker*➪* sᴇᴛ ɢʀᴏᴜᴘ sᴛɪᴄᴋᴇʀs..
 """
 
 SET_DESC_HANDLER = CommandHandler("setdesc", set_desc, run_async=True)

@@ -32,14 +32,14 @@ def afk(update: Update, context: CallbackContext):
         reason = args[1]
         if len(reason) > 100:
             reason = reason[:100]
-            notice = "\nYour afk reason was shortened to 100 characters."
+            notice = "\n𝐘ᴏᴜʀ 𝐀𝐅𝐊 𝐑ᴇᴀsᴏɴ 𝐖ᴀs 𝐒ʜᴏʀᴛᴇɴᴇᴅ 𝐓ᴏ 100 𝐂ʜᴀʀᴀᴄᴛᴇʀs.."
     else:
         reason = ""
 
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
     try:
-        update.effective_message.reply_text("{} is now away!{}".format(fname, notice))
+        update.effective_message.reply_text("{} 𝐈s 𝐍ᴏᴡ 𝐀ᴡᴀʏ!! 𝐃ᴏɴ'ᴛ 𝐃ɪsᴛᴜʀʙ.🤫{}".format(fname, notice))
     except BadRequest:
         pass
 
@@ -58,14 +58,14 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} is here!",
-                "{} is back!",
-                "{} is now in the chat!",
-                "{} is awake!",
-                "{} is back online!",
-                "{} is finally here!",
-                "Welcome back! {}",
-                "Where is {}?\nIn the chat!",
+                "{} 𝐈s 𝐇ᴇʀᴇ!!🤩",
+                "{} 𝐈s 𝐁ᴀᴄᴋ!!😍",
+                "{} 𝐈s 𝐍ᴏᴡ 𝐈ɴ 𝐓ʜᴇ 𝐂ʜᴀᴛ!!😜",
+                "{} 𝐇ᴀs 𝐀ᴡᴀᴋᴇɴ!!🥰",
+                "{} 𝐈s 𝐁ᴀᴄᴋ 𝐎ɴ 𝐓ᴇʟᴇɢʀᴀᴍ!!😋",
+                "{} 𝐈s 𝐅ɪɴᴀʟʟʏ 𝐇ᴇʀᴇ!!😍",
+                "𝐖ᴇʟᴄᴏᴍᴇ 𝐀ɢᴀɪɴ!! {} 🤗",
+                "𝐖ʜᴇʀᴇ 𝐈s? {}?\n𝐈ɴ 𝐓ʜᴇ 𝐂ʜᴀᴛ!!😎",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
@@ -110,7 +110,7 @@ def reply_afk(update: Update, context: CallbackContext):
             try:
                 chat = bot.get_chat(user_id)
             except BadRequest:
-                print("Error: Could not fetch userid {} for AFK module".format(user_id))
+                print("ᴇʀʀᴏʀ✖️ 𝐂ᴏᴜʟᴅ 𝐍ᴏᴛ 𝐅ᴇᴛᴄʜ 𝐔sᴇʀ 𝐈'ᴅ {} 𝐅ᴏʀ 𝐀𝐅𝐊 𝐌ᴏᴅᴜʟᴇ".format(user_id))
                 return
             fst_name = chat.first_name
 
@@ -138,10 +138,9 @@ def check_afk(update, context, user_id, fst_name, userc_id):
 
 
 __help__ = """
-*Away from group*
- ❍ /afk <reason>*:* mark yourself as AFK(away from keyboard).
- ❍ brb <reason>*:* same as the afk command - but not a command.
-When marked as AFK, any mentions will be replied to with a message to say you're not available!
+*⁠☞ 𝐀ᴡᴀʏ 𝐅ʀᴏᴍ 𝐊ᴇʏʙᴏᴀʀᴅ (𝐀𝐅𝐊)*
+ ➥ /afk <reason>*➝* 𝐌ᴀʀᴋ 𝐘ᴏᴜʀsᴇʟғ 𝐀s 𝐀𝐅𝐊.
+ ➥ brb <reason>*➝* 𝐒ᴀᴍᴇ 𝐀s 𝐀𝐅𝐊 𝐁ᴜᴛ 𝐘ᴏᴜ 𝐃ɪᴅɴ'ᴛ 𝐇ᴀᴠᴇ 𝐓ᴏ 𝐖ʀɪᴛᴇ / ..
 """
 
 AFK_HANDLER = DisableAbleCommandHandler("afk", afk, run_async=True)
@@ -160,7 +159,7 @@ dispatcher.add_handler(AFK_REGEX_HANDLER, AFK_GROUP)
 dispatcher.add_handler(NO_AFK_HANDLER, AFK_GROUP)
 dispatcher.add_handler(AFK_REPLY_HANDLER, AFK_REPLY_GROUP)
 
-__mod_name__ = "Aꜰᴋ​"
+__mod_name__ = "𝐀𝐅𝐊💥​"
 __command_list__ = ["afk"]
 __handlers__ = [
     (AFK_HANDLER, AFK_GROUP),

@@ -955,7 +955,7 @@ dispatcher.add_handler(DEMOTE_HANDLER)
 dispatcher.add_handler(SET_TITLE_HANDLER)
 dispatcher.add_handler(ADMIN_REFRESH_HANDLER)
 
-__mod_name__ = "Aᴅᴍɪɴs"
+__mod_name__ = "𝐀∂мιиѕ🧑"
 __command_list__ = [
     "setdesc" "setsticker" "setgpic" "delgpic" "setgtitle" "adminlist",
     "admins",

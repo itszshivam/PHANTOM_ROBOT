@@ -11,7 +11,7 @@ DEFAULT_WELCOME = "Hey {first}, how are you?"
 DEFAULT_GOODBYE = "Nice knowing ya!"
 
 DEFAULT_WELCOME_MESSAGES = [
-    "𝐇ᴇʏ {fullname} 🌹
+"𝐇ᴇʏ {fullname} 🌹
 𝐖ᴇʟᴄᴏᴍᴇ 𝐓ᴏ {chatname} 🌹
 𝐘ᴏᴜʀ 𝐈ᴅ ⤖ {id} 🌸
 𝐘ᴏᴜʀ 𝐔sᴇʀɴᴀᴍᴇ ⤖ {mention} 🌸
